@@ -9,7 +9,7 @@ btn.addEventListener('click', (e) => {
   e.preventDefault();
   msg1.textContent = 'Loading...'
   const usedAddress = txt.value
-  fetch(`http://localhost:3000/weather?address=${usedAddress}`)
+  fetch(`/weather?address=${usedAddress}`)
   .then(res => {
     res.json().then(data => {
       if(data.error) {
